@@ -2,7 +2,19 @@
   <xs:element name="Catalog">
     <xs:complexType>
       <xs:sequence>
+        <!-- Input validation of Continents -->
         <xs:element name="Continent" maxOccurs="unbounded" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Europe"/>
+              <xs:enumeration value="Asia"/>
+              <xs:enumeration value="North America"/>
+              <xs:enumeration value="South America"/>
+              <xs:enumeration value="Africa"/>
+              <xs:enumeration value="Australia"/>
+              <xs:enumeration value="Antarctica"/>
+            </xs:restriction>
+          </xs:simpleType>
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Country" maxOccurs="unbounded" minOccurs="0">
@@ -19,8 +31,22 @@
                                     <xs:sequence>
                                       <xs:element type="xs:string" name="Description"/>
                                       <xs:element type="xs:byte" name="PrepTime"/>
+                                        <xs:simpleType>
+                                          <xs:restriction base="xs:short">
+                                            <xs:pattern value="[0-9][0-9][0-9]"/> <!-- Exactly 3 digits in sequence -->
+                                            <xs:minInclusive value="0"/>  <!-- Minimum value of 0 -->
+                                            <xs:maxInclusive value="999"/> <!-- Maximum value of 999 -->
+                                          </xs:restriction>
+                                        </xs:simpleType>
                                       <xs:element type="xs:byte" name="CookingTime"/>
-                                      <xs:element type="xs:byte" name="EstimatedCost"/>
+                                      <!-- Restriction 3: EstimatedCost must be a positive number -->
+                                      <xs:element type="xs:byte" name="EstimatedCost">
+                                        <xs:simpleType>
+                                          <xs:restriction base="xs:byte">
+                                            <xs:minInclusive value="0"/> 
+                                          </xs:restriction>
+                                        </xs:simpleType>
+                                      </xs:element> 
                                       <xs:element name="NutritionalValue">
                                         <xs:complexType>
                                           <xs:sequence>
@@ -49,7 +75,14 @@
                                           </xs:sequence>
                                         </xs:complexType>
                                       </xs:element>
+                                      <!-- Satisfaction Score should be between 1-5 -->
                                       <xs:element type="xs:float" name="SatisfactionScore"/>
+                                        <xs:simpleType>
+                                          <xs:restriction base="xs:float">
+                                            <xs:minInclusive value="1"/> 
+                                            <xs:maxInclusive value="5"/>
+                                          </xs:restriction>
+                                        </xs:simpleType>
                                       <xs:element name="Cook">
                                         <xs:complexType>
                                           <xs:sequence>
@@ -71,7 +104,13 @@
                                                   <xs:element name="Contact">
                                                     <xs:complexType>
                                                       <xs:sequence>
+                                                        <!-- It should be a valid mail address -->
                                                         <xs:element type="xs:string" name="Email"/>
+                                                          <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                              <xs:pattern value="[@]"/>
+                                                            </xs:restriction>
+                                                          </xs:simpleType>
                                                         <xs:element type="xs:long" name="Phone" minOccurs="0"/>
                                                       </xs:sequence>
                                                     </xs:complexType>
