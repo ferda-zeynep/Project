@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catalog>
+	<Continent name="Europe">
+		<Country name="Italian" zone="Western Europe">
+			<Category flavor="Savory" spice_level="Mild" course_type="Main Course">
+				<Recipes>
+					<Recipe ID="IT001" name="Vegetarian Lasagna" date="2024-04-03">
+						<Description>Vegetarian Lasagna Recipe with Zuchini</Description>
+						<PrepTime>25</PrepTime>
+						<CookingTime>10</CookingTime>
+						<EstimatedCost>7</EstimatedCost>
+						<NutritionalValue>
+							<Energy>400 kcal</Energy>
+							<Carbohydrates>60g</Carbohydrates>
+							<Fat>10g</Fat>
+							<Sugar>5g</Sugar>
+						</NutritionalValue>
+						<Ingredients>
+							<Ingredient>Lasagna noodles</Ingredient>
+							<Ingredient>Olive oil</Ingredient>
+							<Ingredient>Onion</Ingredient>
+							<Ingredient>Garlic</Ingredient>
+							<Ingredient>Zucchini</Ingredient>
+							<Ingredient>Yellow squash</Ingredient>
+							<Ingredient>Mushrooms</Ingredient>
+							<Ingredient>Canned diced tomatoes</Ingredient>
+						</Ingredients>
+						<Instructions>
+							<Preparations>Cook lasagna noodles according to package instructions.</Preparations>
+							<Cooking>Heat olive oil in a pan, sauté onion and garlic until soft.</Cooking>
+							<Cooking>Add chopped red bell pepper, zucchini, yellow squash, and mushrooms. Cook until vegetables are tender.</Cooking>
+							<Cooking>Stir in diced tomatoes, tomato sauce, oregano, basil, salt, and pepper. Simmer for a few minutes.</Cooking>
+							<Cooking>In a separate bowl, mix ricotta cheese with spinach leaves.</Cooking>
+							<Cooking>Bake for 30-35 minutes until golden and bubbly.</Cooking>
+							<Storing>Refrigerate for up to 24 hours.</Storing>
+							<Reheating>1</Reheating>
+							<AdditionalTips>Let it cool for a few minutes before serving.</AdditionalTips>
+						</Instructions>
+						<SatisfactionScore>4.5</SatisfactionScore>
+						<Cook>
+							<Details ID="CK01" name="Giovanni" age="35" location="Milan" hobbies="Cooking, gardening">
+								<FavDish>Pizza</FavDish>
+								<Experience>5 years as a chef</Experience>
+								<SkillLevel points="95" posts="20" />
+								<Contact>
+									<Email>giovanni@gmail.com</Email>
+									<Phone>+39123456789</Phone>
+								</Contact>
+							</Details>
+						</Cook>
+						<Review>
+							<UserPosted name="Jennifer Becker" date="2024-04-16" ID="US01">
+								<Details points="80" posts="5" />
+								<Comment>Delicious! Highly recommend.</Comment>
+								<Votes>
+									<Upvotes>25</Upvotes>
+									<Downvotes>2</Downvotes>
+								</Votes>
+							</UserPosted>
+						</Review>
+					</Recipe>
+				</Recipes>
+			</Category>
+		</Country>
+		<Country name="Hungary" zone="Central Europe">
+			<Category flavor="Savory" spice_level="Medium" course_type="Main Course">
+				<Recipes>
+					<Recipe ID="HU001" name="Hungarian Goulash" date="2023-11-15">
+						<Description>Traditional Hungarian Beef Goulash</Description>
+						<PrepTime>40</PrepTime>
+						<CookingTime>120</CookingTime>
+						<EstimatedCost>15</EstimatedCost>
+						<NutritionalValue>
+							<Energy>550 kcal</Energy>
+							<Carbohydrates>40g</Carbohydrates>
+							<Fat>30g</Fat>
+							<Sugar>10g</Sugar>
+						</NutritionalValue>
+						<Ingredients>
+							<Ingredient>Vegetable oil</Ingredient>
+							<Ingredient>Onion</Ingredient>
+							<Ingredient>Garlic</Ingredient>
+							<Ingredient>Beef stew meat</Ingredient>
+							<Ingredient>Paprika</Ingredient>
+							<Ingredient>Caraway seeds</Ingredient>
+							<Ingredient>Thyme</Ingredient>
+							<Ingredient>Salt</Ingredient>
+							<Ingredient>Black pepper</Ingredient>
+							<Ingredient>Tomato paste</Ingredient>
+							<Ingredient>Beef broth</Ingredient>
+							<Ingredient>Potatoes</Ingredient>
+							<Ingredient>Carrots</Ingredient>
+							<Ingredient>Red bell pepper</Ingredient>
+							<Ingredient>Green bell pepper</Ingredient>
+							<Ingredient>Sour cream (optional)</Ingredient>
+							<Ingredient>Fresh parsley</Ingredient>
+						</Ingredients>
+						<Instructions>
+							<Preparations>Chop onions, mince garlic, cut beef into cubes, peel and cube potatoes, slice carrots, chop bell peppers.</Preparations>
+							<Cooking>Heat oil, sauté onions and garlic.</Cooking>
+							<Cooking>Brown beef cubes.</Cooking>
+							<Cooking>Add paprika, caraway, thyme, salt, pepper; cook for 2 minutes.</Cooking>
+							<Cooking>Stir in tomato paste and beef broth, simmer for 1 hour.</Cooking>
+							<Cooking>Add potatoes, carrots, bell peppers; simmer for 30-40 minutes.</Cooking>
+							<Cooking>Adjust seasoning, add more broth if needed.</Cooking>
+							<Storing>Refrigerate for up to 3 days.</Storing>
+							<Reheating>Reheat on stovetop or in microwave.</Reheating>
+							<AdditionalTips>Serve with crusty bread or egg noodles.</AdditionalTips>
+						</Instructions>
+						<SatisfactionScore>4.8</SatisfactionScore>
+						<Cook>
+							<Details ID="CK02" name="Katalin" age="42" location="Budapest" hobbies="Cooking, traveling">
+								<FavDish>Goulash</FavDish>
+								<Experience>Home cook with 20 years of experience</Experience>
+								<SkillLevel points="90" posts="15" />
+								<Contact>
+									<Email>katalin@gmail.com</Email>
+									<Phone>+36123456789</Phone>
+								</Contact>
+							</Details>
+						</Cook>
+						<Review>
+							<UserPosted name="David Smith" date="2023-11-20" ID="US02">
+								<Details points="75" posts="3" />
+								<Comment>Amazingly flavorful and hearty!</Comment>
+								<Votes>
+									<Upvotes>18</Upvotes>
+									<Downvotes>1</Downvotes>
+								</Votes>
+							</UserPosted>
+						</Review>
+					</Recipe>
+				</Recipes>
+			</Category>
+		</Country>
+	</Continent>
+  <Continent name="North America">
+    <Country name="Mexico" zone="Central America">
+      <Category flavor="Savory" spice_level="Medium" course_type="Main Course">
+        <Recipes>
+          <Recipe ID="MX001" name="Chicken Fajitas" date="2023-11-20">
+            <Description>A classic Mexican dish with seasoned chicken, bell peppers, and onions, served with warm tortillas.</Description>
+            <PrepTime>15</PrepTime>
+            <CookingTime>20</CookingTime>
+            <EstimatedCost>10</EstimatedCost>
+            <NutritionalValue>
+              <Energy>500 kcal</Energy>
+              <Carbohydrates>40g</Carbohydrates>
+              <Fat>25g</Fat>
+              <Sugar>5g</Sugar>
+            </NutritionalValue>
+            <Ingredients>
+              <Ingredient>Boneless, skinless chicken breasts</Ingredient>
+              <Ingredient>Olive oil</Ingredient>
+              <Ingredient>Onion</Ingredient>
+              <Ingredient>Red bell pepper</Ingredient>
+              <Ingredient>Green bell pepper</Ingredient>
+              <Ingredient>Yellow bell pepper</Ingredient>
+              <Ingredient>Garlic</Ingredient>
+              <Ingredient>Fajita seasoning</Ingredient>
+              <Ingredient>Salt</Ingredient>
+              <Ingredient>Pepper</Ingredient>
+              <Ingredient>Flour tortillas</Ingredient>
+            </Ingredients>
+            <Instructions>
+              <Preparations>Slice chicken breasts, onions, and bell peppers.</Preparations>
+              <Cooking>Cook chicken in olive oil until browned.</Cooking>
+              <Cooking>Add onions and bell peppers, cook until tender-crisp.</Cooking>
+              <Cooking>Stir in garlic and fajita seasoning.</Cooking>
+              <Cooking>Warm tortillas.</Cooking>
+              <Storing>Refrigerate leftovers for up to 3 days.</Storing>
+              <Reheating>Reheat in a skillet or microwave until warmed through.</Reheating>
+              <AdditionalTips>Serve with your favorite fajita toppings like shredded cheese, sour cream, salsa, guacamole, and lime wedges.</AdditionalTips>
+            </Instructions>
+            <SatisfactionScore>4.8</SatisfactionScore>
+            <Cook>
+              <Details ID="CK02" name="Isabella" age="28" location="Mexico City" hobbies="Cooking, traveling">
+                <FavDish>Tacos</FavDish>
+                <Experience>Home cook with a passion for Mexican cuisine.</Experience>
+                <SkillLevel points="85" posts="12" />
+                <Contact>
+                  <Email>isabella@email.com</Email>
+                </Contact>
+              </Details>
+            </Cook>
+            <Review>
+              <UserPosted name="Lisa Arambula" date="2023-11-22" ID="US02">
+                <Details points="90" posts="25" />
+                <Comment>These fajitas were amazing! So flavorful and easy to make.</Comment>
+                <Votes>
+                  <Upvotes>32</Upvotes>
+                  <Downvotes>1</Downvotes>
+                </Votes>
+              </UserPosted>
+            </Review>
+          </Recipe>
+        </Recipes>
+      </Category>
+    </Country>
+  </Continent>
+  <Continent name="Asia">
+    <Country name="Israel" zone="Western Asia">
+      <Category flavor="Savory" spice_level="Medium" course_type="Appetizer">
+        <Recipes>
+          <Recipe ID="IS001" name="Falafel" date="2023-11-15">
+            <Description>Crispy and flavorful falafel made with chickpeas.</Description>
+            <PrepTime>20</PrepTime>
+            <CookingTime>15</CookingTime>
+            <EstimatedCost>5</EstimatedCost>
+            <NutritionalValue>
+              <Energy>350 kcal</Energy>
+              <Carbohydrates>45g</Carbohydrates>
+              <Fat>15g</Fat>
+              <Sugar>3g</Sugar>
+            </NutritionalValue>
+            <Ingredients>
+              <Ingredient>Dried chickpeas</Ingredient>
+              <Ingredient>Onion</Ingredient>
+              <Ingredient>Garlic</Ingredient>
+              <Ingredient>Parsley</Ingredient>
+              <Ingredient>Cilantro</Ingredient>
+              <Ingredient>Salt</Ingredient>
+              <Ingredient>Red pepper</Ingredient>
+              <Ingredient>Cumin</Ingredient>
+              <Ingredient>Baking powder</Ingredient>
+              <Ingredient>Flour</Ingredient>
+              <Ingredient>Vegetable oil</Ingredient>
+            </Ingredients>
+            <Instructions>
+              <Preparations>Soak chickpeas overnight, then drain.</Preparations>
+              <Cooking>Blend chickpeas, onion, garlic, herbs, spices, and baking powder in a food processor.</Cooking>
+              <Cooking>Add flour and pulse until mixture forms a ball.</Cooking>
+              <Cooking>Refrigerate mixture for at least 1 hour.</Cooking>
+              <Cooking>Form mixture into small balls and deep fry until golden brown.</Cooking>
+              <Storing>Store in an airtight container in the refrigerator for up to 3 days.</Storing>
+              <Reheating>Reheat in a 350°F (175°C) oven for 10-15 minutes.</Reheating>
+              <AdditionalTips>Serve with tahini sauce, pita bread, and your favorite toppings.</AdditionalTips>
+            </Instructions>
+            <SatisfactionScore>4.8</SatisfactionScore>
+            <Cook>
+              <Details ID="CK02" name="Sarah" age="28" location="Tel Aviv" hobbies="Cooking, traveling">
+                <FavDish>Hummus</FavDish>
+                <Experience>3 years as a home cook</Experience>
+                <SkillLevel points="85" posts="10" />
+                <Contact>
+                  <Email>sarah@gmail.com</Email>
+                  <Phone>+972123456789</Phone>
+                </Contact>
+              </Details>
+            </Cook>
+            <Review>
+              <UserPosted name="David Miller" date="2023-11-20" ID="US02">
+                <Details points="90" posts="15" />
+                <Comment>These falafel are amazing! So flavorful and crispy.</Comment>
+                <Votes>
+                  <Upvotes>35</Upvotes>
+                  <Downvotes>1</Downvotes>
+                </Votes>
+              </UserPosted>
+            </Review>
+          </Recipe>
+        </Recipes>
+      </Category>
+    </Country>
+  </Continent>  
+</Catalog>

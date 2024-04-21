@@ -1,0 +1,151 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Catalog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Continent" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Country" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Category">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Recipes">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Recipe">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Description"/>
+                                      <xs:element type="xs:byte" name="PrepTime"/>
+                                      <xs:element type="xs:byte" name="CookingTime"/>
+                                      <xs:element type="xs:byte" name="EstimatedCost"/>
+                                      <xs:element name="NutritionalValue">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="Energy"/>
+                                            <xs:element type="xs:string" name="Carbohydrates"/>
+                                            <xs:element type="xs:string" name="Fat"/>
+                                            <xs:element type="xs:string" name="Sugar"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Ingredients">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="Ingredient" maxOccurs="unbounded" minOccurs="0"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Instructions">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="Preparations"/>
+                                            <xs:element type="xs:string" name="Cooking" maxOccurs="unbounded" minOccurs="0"/>
+                                            <xs:element type="xs:string" name="Storing"/>
+                                            <xs:element type="xs:string" name="Reheating"/>
+                                            <xs:element type="xs:string" name="AdditionalTips"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:float" name="SatisfactionScore"/>
+                                      <xs:element name="Cook">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Details">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element type="xs:string" name="FavDish"/>
+                                                  <xs:element type="xs:string" name="Experience"/>
+                                                  <xs:element name="SkillLevel">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="points" use="optional"/>
+                                                          <xs:attribute type="xs:byte" name="posts" use="optional"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="Contact">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element type="xs:string" name="Email"/>
+                                                        <xs:element type="xs:long" name="Phone" minOccurs="0"/>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute type="xs:string" name="ID" use="optional"/>
+                                                <xs:attribute type="xs:string" name="name" use="optional"/>
+                                                <xs:attribute type="xs:byte" name="age" use="optional"/>
+                                                <xs:attribute type="xs:string" name="location" use="optional"/>
+                                                <xs:attribute type="xs:string" name="hobbies" use="optional"/>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Review">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="UserPosted">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="Details">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="points" use="optional"/>
+                                                          <xs:attribute type="xs:byte" name="posts" use="optional"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element type="xs:string" name="Comment"/>
+                                                  <xs:element name="Votes">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element type="xs:byte" name="Upvotes"/>
+                                                        <xs:element type="xs:byte" name="Downvotes"/>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute type="xs:string" name="name" use="optional"/>
+                                                <xs:attribute type="xs:date" name="date" use="optional"/>
+                                                <xs:attribute type="xs:string" name="ID" use="optional"/>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="ID" use="optional"/>
+                                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                                    <xs:attribute type="xs:date" name="date" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="flavor" use="optional"/>
+                        <xs:attribute type="xs:string" name="spice_level" use="optional"/>
+                        <xs:attribute type="xs:string" name="course_type" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="name" use="optional"/>
+                  <xs:attribute type="xs:string" name="zone" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
