@@ -1,142 +1,375 @@
 {
-  "Catalog": [
-    {
-      "name": "Europe",
-      "Countries": [
-        {
-          "name": "Italian",
-          "zone": "Western Europe",
-          "Recipes": [
-            {
-              "ID": "IT001",
-              "name": "Vegetarian Lasagna",
-              "date": "2024-04-03",
-              "Description": "Vegetarian Lasagna Recipe with Zuchini",
-              "PrepTime": "25",
-              "CookingTime": "10",
-              "EstimatedCost": "7",
-              "NutritionalValue": {
-                "Energy": "400 kcal",
-                "Carbohydrates": "60g",
-                "Fat": "10g",
-                "Sugar": "5g"
-              },
-              "Ingredients": [
-                "Lasagna noodles",
-                "Olive oil",
-                "Onion",
-                "Garlic",
-                "Zucchini",
-                "Yellow squash",
-                "Mushrooms",
-                "Canned diced tomatoes"
-              ],
-              "Instructions": [
-                "Cook lasagna noodles according to package instructions.",
-                "Heat olive oil in a pan, sauté onion and garlic until soft.",
-                "Add chopped red bell pepper, zucchini, yellow squash, and mushrooms. Cook until vegetables are tender.",
-                "Stir in diced tomatoes, tomato sauce, oregano, basil, salt, and pepper. Simmer for a few minutes.",
-                "In a separate bowl, mix ricotta cheese with spinach leaves.",
-                "Bake for 30-35 minutes until golden and bubbly.",
-                "Refrigerate for up to 24 hours.",
-                "1",
-                "Let it cool for a few minutes before serving."
-              ],
-              "SatisfactionScore": "4.5",
-              "Cook": {
-                "Details": {
-                  "ID": "CK01",
-                  "name": "Giovanni",
-                  "age": "35",
-                  "location": "Milan",
-                  "hobbies": "Cooking, gardening",
-                  "FavDish": "Pizza",
-                  "Experience": "5 years as a chef",
-                  "SkillLevel": {
-                    "points": "95",
-                    "posts": "20"
-                  },
-                  "Contact": {
-                    "Email": "giovanni@gmail.com",
-                    "Phone": "+39123456789"
+  "Catalog": {
+    "Continents": [
+      {
+        "name": "Europe",
+        "Countries": [
+          {
+            "name": "Italian",
+            "zone": "Western Europe",
+            "Categories": [
+              {
+                "flavor": "Savory",
+                "spice_level": "Mild",
+                "course_type": "Main Course",
+                "Recipes": [
+                  {
+                    "ID": "IT001",
+                    "name": "Vegetarian Lasagna",
+                    "date": "2024-04-03",
+                    "Description": "Vegetarian Lasagna Recipe with Zuchini",
+                    "PrepTime": "25",
+                    "CookingTime": "10",
+                    "EstimatedCost": "7",
+                    "NutritionalValue": {
+                      "Energy": "400 kcal",
+                      "Carbohydrates": "60g",
+                      "Fat": "10g",
+                      "Sugar": "5g"
+                    },
+                    "Ingredients": [
+                      "Lasagna noodles",
+                      "Olive oil",
+                      "Onion",
+                      "Garlic",
+                      "Zucchini",
+                      "Yellow squash",
+                      "Mushrooms",
+                      "Canned diced tomatoes"
+                    ],
+                    "Instructions": [
+                      "Cook lasagna noodles according to package instructions.",
+                      "Heat olive oil in a pan, sauté onion and garlic until soft.",
+                      "Add chopped red bell pepper, zucchini, yellow squash, and mushrooms. Cook until vegetables are tender.",
+                      "Stir in diced tomatoes, tomato sauce, oregano, basil, salt, and pepper. Simmer for a few minutes.",
+                      "In a separate bowl, mix ricotta cheese with spinach leaves.",
+                      "Bake for 30-35 minutes until golden and bubbly.",
+                      "Refrigerate for up to 24 hours.",
+                      "1",
+                      "Let it cool for a few minutes before serving."
+                    ],
+                    "SatisfactionScore": "4.5",
+                    "Cook": {
+                      "Details": {
+                        "ID": "CK01",
+                        "name": "Giovanni",
+                        "age": "35",
+                        "location": "Milan",
+                        "hobbies": "Cooking, gardening",
+                        "FavDish": "Pizza",
+                        "Experience": "5 years as a chef",
+                        "SkillLevel": {
+                          "points": "95",
+                          "posts": "20"
+                        },
+                        "Contact": {
+                          "Email": "giovanni@gmail.com",
+                          "Phone": "+39123456789"
+                        }
+                      }
+                    },
+                    "Review": {
+                      "UserPosted": {
+                        "name": "Jennifer Becker",
+                        "date": "2024-04-16",
+                        "ID": "US01",
+                        "Details": {
+                          "points": "80",
+                          "posts": "5"
+                        },
+                        "Comment": "Delicious! Highly recommend.",
+                        "Votes": {
+                          "Upvotes": "25",
+                          "Downvotes": "2"
+                        }
+                      }
+                    }
                   }
-                }
-              },
-              "Review": {
-                "UserPosted": {
-                  "name": "Jennifer Becker",
-                  "date": "2024-04-16",
-                  "ID": "US01",
-                  "Details": {
-                    "points": "80",
-                    "posts": "5"
-                  },
-                  "Comment": "Delicious! Highly recommend.",
-                  "Votes": {
-                    "Upvotes": "25",
-                    "Downvotes": "2"
-                  }
-                }
+                ]
               }
-            }
-          ]
-        },
-        {
-          "name": "Hungary",
-          "zone": "Central Europe",
-          "Recipes": [
-            {
-              "ID": "HU001",
-              "name": "Hungarian Goulash",
-              "date": "2023-11-15",
-              "Description": "Traditional Hungarian Beef Goulash",
-              "PrepTime": "40",
-              "CookingTime": "120",
-              "EstimatedCost": "15",
-              "NutritionalValue": {
-                "Energy": "550 kcal",
-                "Carbohydrates": "40g",
-                "Fat": "30g",
-                "Sugar": "10g"
-              },
-              "Ingredients": [
-                "Vegetable oil",
-                "Onion",
-                "Garlic",
-                "Beef stew meat",
-                "Paprika",
-                "Caraway seeds",
-                "Thyme",
-                "Salt",
-                "Black pepper",
-                "Tomato paste",
-                "Beef broth",
-                "Potatoes",
-                "Carrots",
-                "Red bell pepper",
-                "Green bell pepper",
-                "Sour cream (optional)",
-                "Fresh parsley"
-              ],
-              "Instructions": [
-                "Chop onions, mince garlic, cut beef into cubes, peel and cube potatoes, slice carrots, chop bell peppers.",
-                "Heat oil, sauté onions and garlic.",
-                "Brown beef cubes.",
-                "Add paprika, caraway, thyme, salt, pepper; cook for 2 minutes.",
-                "Stir in tomato paste and beef broth, simmer for 1 hour.",
-                "Add potatoes, carrots, bell peppers; simmer for 30-40 minutes.",
-                "Adjust seasoning, add more broth if needed.",
-                "Refrigerate for up to 3 days.",
-                "Reheat on stovetop or in microwave.",
-                "Serve with crusty bread or egg noodles."
-              ],
-              "SatisfactionScore": "4.8",
-              "Cook": {
-                "Details": {
-                  "ID": "CK02",
-                  "name": "Katalin",
-                  "age": "42",
-                  "location": "Budapest",
-                  "hobbies": "Cooking, traveling",
-                  "FavDish": "Goulash",
-                 
+            ]
+          },
+          {
+            "name": "Hungary",
+            "zone": "Central Europe",
+            "Categories": [
+              {
+                "flavor": "Savory",
+                "spice_level": "Medium",
+                "course_type": "Main Course",
+                "Recipes": [
+                  {
+                    "ID": "HU001",
+                    "name": "Hungarian Goulash",
+                    "date": "2023-11-15",
+                    "Description": "Traditional Hungarian Beef Goulash",
+                    "PrepTime": "40",
+                    "CookingTime": "120",
+                    "EstimatedCost": "15",
+                    "NutritionalValue": {
+                      "Energy": "550 kcal",
+                      "Carbohydrates": "40g",
+                      "Fat": "30g",
+                      "Sugar": "10g"
+                    },
+                    "Ingredients": [
+                      "Vegetable oil",
+                      "Onion",
+                      "Garlic",
+                      "Beef stew meat",
+                      "Paprika",
+                      "Caraway seeds",
+                      "Thyme",
+                      "Salt",
+                      "Black pepper",
+                      "Tomato paste",
+                      "Beef broth",
+                      "Potatoes",
+                      "Carrots",
+                      "Red bell pepper",
+                      "Green bell pepper",
+                      "Sour cream (optional)",
+                      "Fresh parsley"
+                    ],
+                    "Instructions": [
+                      "Chop onions, mince garlic, cut beef into cubes, peel and cube potatoes, slice carrots, chop bell peppers.",
+                      "Heat oil, sauté onions and garlic.",
+                      "Brown beef cubes.",
+                      "Add paprika, caraway, thyme, salt, pepper; cook for 2 minutes.",
+                      "Stir in tomato paste and beef broth, simmer for 1 hour.",
+                      "Add potatoes, carrots, bell peppers; simmer for 30-40 minutes.",
+                      "Adjust seasoning, add more broth if needed.",
+                      "Refrigerate for up to 3 days.",
+                      "Reheat on stovetop or in microwave.",
+                      "Serve with crusty bread or egg noodles."
+                    ],
+                    "SatisfactionScore": "4.8",
+                    "Cook": {
+                      "Details": {
+                        "ID": "CK02",
+                        "name": "Katalin",
+                        "age": "42",
+                        "location": "Budapest",
+                        "hobbies": "Cooking, traveling",
+                        "FavDish": "Goulash",
+                        "Experience": "Home cook with 20 years of experience",
+                        "SkillLevel": {
+                          "points": "90",
+                          "posts": "15"
+                        },
+                        "Contact": {
+                          "Email": "katalin@gmail.com",
+                          "Phone": "+36123456789"
+                        }
+                      }
+                    },
+                    "Review": {
+                      "UserPosted": {
+                        "name": "David Smith",
+                        "date": "2023-11-20",
+                        "ID": "US02",
+                        "Details": {
+                          "points": "75",
+                          "posts": "3"
+                        },
+                        "Comment": "Amazingly flavorful and hearty!",
+                        "Votes": {
+                          "Upvotes": "18",
+                          "Downvotes": "1"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "North America",
+        "Countries": [
+          {
+            "name": "Mexico",
+            "zone": "Central America",
+            "Categories": [
+              {
+                "flavor": "Savory",
+                "spice_level": "Medium",
+                "course_type": "Main Course",
+                "Recipes": [
+                  {
+                    "ID": "MX001",
+                    "name": "Chicken Fajitas",
+                    "date": "2023-11-20",
+                    "Description": "A classic Mexican dish with seasoned chicken, bell peppers, and onions, served with warm tortillas.",
+                    "PrepTime": "15",
+                    "CookingTime": "20",
+                    "EstimatedCost": "10",
+                    "NutritionalValue": {
+                      "Energy": "500 kcal",
+                      "Carbohydrates": "40g",
+                      "Fat": "25g",
+                      "Sugar": "5g"
+                    },
+                    "Ingredients": [
+                      "Boneless, skinless chicken breasts",
+                      "Olive oil",
+                      "Onion",
+                      "Red bell pepper",
+                      "Green bell pepper",
+                      "Yellow bell pepper",
+                      "Garlic",
+                      "Fajita seasoning",
+                      "Salt",
+                      "Pepper",
+                      "Flour tortillas"
+                    ],
+                    "Instructions": [
+                      "Slice chicken breasts, onions, and bell peppers.",
+                      "Cook chicken in olive oil until browned.",
+                      "Add onions and bell peppers, cook until tender-crisp.",
+                      "Stir in garlic and fajita seasoning.",
+                      "Warm tortillas.",
+                      "Refrigerate leftovers for up to 3 days.",
+                      "Reheat in a skillet or microwave until warmed through.",
+                      "Serve with your favorite fajita toppings like shredded cheese, sour cream, salsa, guacamole, and lime wedges."
+                    ],
+                    "SatisfactionScore": "4.8",
+                    "Cook": {
+                      "Details": {
+                        "ID": "CK02",
+                        "name": "Isabella",
+                        "age": "28",
+                        "location": "Mexico City",
+                        "hobbies": "Cooking, traveling",
+                        "FavDish": "Tacos",
+                        "Experience": "Home cook with a passion for Mexican cuisine.",
+                        "SkillLevel": {
+                          "points": "85",
+                          "posts": "12"
+                        },
+                        "Contact": {
+                          "Email": "isabella@email.com"
+                        }
+                      }
+                    },
+                    "Review": {
+                      "UserPosted": {
+                        "name": "Lisa Arambula",
+                        "date": "2023-11-22",
+                        "ID": "US02",
+                        "Details": {
+                          "points": "90",
+                          "posts": "25"
+                        },
+                        "Comment": "These fajitas were amazing! So flavorful and easy to make.",
+                        "Votes": {
+                          "Upvotes": "32",
+                          "Downvotes": "1"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Asia",
+        "Countries": [
+          {
+            "name": "Israel",
+            "zone": "Western Asia",
+            "Categories": [
+              {
+                "flavor": "Savory",
+                "spice_level": "Medium",
+                "course_type": "Appetizer",
+                "Recipes": [
+                  {
+                    "ID": "IS001",
+                    "name": "Falafel",
+                    "date": "2023-11-15",
+                    "Description": "Crispy and flavorful falafel made with chickpeas.",
+                    "PrepTime": "20",
+                    "CookingTime": "15",
+                    "EstimatedCost": "5",
+                    "NutritionalValue": {
+                      "Energy": "350 kcal",
+                      "Carbohydrates": "45g",
+                      "Fat": "15g",
+                      "Sugar": "3g"
+                    },
+                    "Ingredients": [
+                      "Dried chickpeas",
+                      "Onion",
+                      "Garlic",
+                      "Parsley",
+                      "Cilantro",
+                      "Salt",
+                      "Red pepper",
+                      "Cumin",
+                      "Baking powder",
+                      "Flour",
+                      "Vegetable oil"
+                    ],
+                    "Instructions": [
+                      "Soak chickpeas overnight, then drain.",
+                      "Blend chickpeas, onion, garlic, herbs, spices, and baking powder in a food processor.",
+                      "Add flour and pulse until mixture forms a ball.",
+                      "Refrigerate mixture for at least 1 hour.",
+                      "Form mixture into small balls and deep fry until golden brown.",
+                      "Store in an airtight container in the refrigerator for up to 3 days.",
+                      "Reheat in a 350°F (175°C) oven for 10-15 minutes.",
+                      "Serve with tahini sauce, pita bread, and your favorite toppings."
+                    ],
+                    "SatisfactionScore": "4.8",
+                    "Cook": {
+                      "Details": {
+                        "ID": "CK02",
+                        "name": "Sarah",
+                        "age": "28",
+                        "location": "Tel Aviv",
+                        "hobbies": "Cooking, traveling",
+                        "FavDish": "Hummus",
+                        "Experience": "3 years as a home cook",
+                        "SkillLevel": {
+                          "points": "85",
+                          "posts": "10"
+                        },
+                        "Contact": {
+                          "Email": "sarah@gmail.com",
+                          "Phone": "+972123456789"
+                        }
+                      }
+                    },
+                    "Review": {
+                      "UserPosted": {
+                        "name": "David Miller",
+                        "date": "2023-11-20",
+                        "ID": "US02",
+                        "Details": {
+                          "points": "90",
+                          "posts": "15"
+                        },
+                        "Comment": "These falafel are amazing! So flavorful and crispy.",
+                        "Votes": {
+                          "Upvotes": "35",
+                          "Downvotes": "1"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
