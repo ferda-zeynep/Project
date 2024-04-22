@@ -1,124 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <!-- Match the root element -->
+
+  <xsl:output method="text"/>
+  <xsl:strip-space elements="*"/>
+
   <xsl:template match="/">
-    <html>
-      <head>
-        <title>Recipe Catalog</title>
-      </head>
-      <body>
-        <!-- Apply templates for each Continent -->
-        <xsl:apply-templates select="Catalog/Continent"/>
-      </body>
-    </html>
+    {
+      "Catalog": {
+        "Continents": [
+          <xsl:apply-templates select="Catalog/Continent"/>
+        ]
+      }
+    }
   </xsl:template>
 
-  <!-- Template to match each Continent element -->
   <xsl:template match="Continent">
-    <h1><xsl:value-of select="@name"/></h1>
-    <!-- Apply templates for each Country -->
-    <xsl:apply-templates select="Country"/>
+    {
+      "name": "<xsl:value-of select="@name"/>",
+      "Countries": [
+        <xsl:apply-templates select="Country"/>
+      ]
+    }
   </xsl:template>
 
-  <!-- Template to match each Country element -->
   <xsl:template match="Country">
-    <h2><xsl:value-of select="@name"/></h2>
-    <!-- Apply templates for each Recipe -->
-    <xsl:apply-templates select="Category/Recipes/Recipe"/>
+    {
+      "name": "<xsl:value-of select="@name"/>",
+      "zone": "<xsl:value-of select="@zone"/>",
+      "Categories": [
+        <xsl:apply-templates select="Category"/>
+      ]
+    }
   </xsl:template>
 
-  <!-- Template to match each Recipe element -->
+  <xsl:template match="Category">
+    {
+      "flavor": "<xsl:value-of select="@flavor"/>",
+      "spice_level": "<xsl:value-of select="@spice_level"/>",
+      "course_type": "<xsl:value-of select="@course_type"/>",
+      "Recipes": [
+        <xsl:apply-templates select="Recipes/Recipe"/>
+      ]
+    }
+  </xsl:template>
+
   <xsl:template match="Recipe">
-    <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
-      <h3><xsl:value-of select="@name"/></h3>
-      <p><strong>Description:</strong> <xsl:value-of select="Description"/></p>
-      <p><strong>Prep Time:</strong> <xsl:value-of select="PrepTime"/> minutes</p>
-      <p><strong>Cooking Time:</strong> <xsl:value-of select="CookingTime"/> minutes</p>
-      <p><strong>Estimated Cost:</strong> $<xsl:value-of select="EstimatedCost"/></p>
-      <!-- Apply templates for NutritionalValue, Ingredients, Instructions, SatisfactionScore, Cook, and Review -->
-      <xsl:apply-templates select="NutritionalValue"/>
-      <xsl:apply-templates select="Ingredients"/>
-      <xsl:apply-templates select="Instructions"/>
-      <xsl:apply-templates select="SatisfactionScore"/>
-      <xsl:apply-templates select="Cook"/>
-      <xsl:apply-templates select="Review"/>
-    </div>
+    {
+      "ID": "<xsl:value-of select="@ID"/>",
+      "name": "<xsl:value-of select="@name"/>",
+      "date": "<xsl:value-of select="@date"/>",
+      "Description": "<xsl:value-of select="Description"/>",
+      "PrepTime": "<xsl:value-of select="PrepTime"/>",
+      "CookingTime": "<xsl:value-of select="CookingTime"/>",
+      "EstimatedCost": "<xsl:value-of select="EstimatedCost"/>",
+      "NutritionalValue": {
+        "Energy": "<xsl:value-of select="NutritionalValue/Energy"/>",
+        "Carbohydrates": "<xsl:value-of select="NutritionalValue/Carbohydrates"/>",
+        "Fat": "<xsl:value-of select="NutritionalValue/Fat"/>",
+        "Sugar": "<xsl:value-of select="NutritionalValue/Sugar"/>"
+      },
+      "Ingredients": [
+        <xsl:apply-templates select="Ingredients/Ingredient"/>
+      ],
+      "Instructions": [
+        <xsl:apply-templates select="Instructions/*"/>
+      ],
+      "SatisfactionScore": "<xsl:value-of select="SatisfactionScore"/>",
+      "Cook": {
+        "Details": {
+          "ID": "<xsl:value-of select="Cook/Details/ID"/>",
+          "name": "<xsl:value-of select="Cook/Details/name"/>",
+          "age": "<xsl:value-of select="Cook/Details/age"/>",
+          "location": "<xsl:value-of select="Cook/Details/location"/>",
+          "hobbies": "<xsl:value-of select="Cook/Details/hobbies"/>",
+          "FavDish": "<xsl:value-of select="Cook/Details/FavDish"/>",
+          "Experience": "<xsl:value-of select="Cook/Details/Experience"/>",
+          "SkillLevel": {
+            "points": "<xsl:value-of select="Cook/Details/SkillLevel/@points"/>",
+            "posts": "<xsl:value-of select="Cook/Details/SkillLevel/@posts"/>"
+          },
+          "Contact": {
+            "Email": "<xsl:value-of select="Cook/Details/Contact/Email"/>",
+            "Phone": "<xsl:value-of select="Cook/Details/Contact/Phone"/>"
+          }
+        }
+      },
+      "Review": {
+        "UserPosted": {
+          "name": "<xsl:value-of select="Review/UserPosted/@name"/>",
+          "date": "<xsl:value-of select="Review/UserPosted/@date"/>",
+          "ID": "<xsl:value-of select="Review/UserPosted/@ID"/>",
+          "Details": {
+            "points": "<xsl:value-of select="Review/UserPosted/Details/@points"/>",
+            "posts": "<xsl:value-of select="Review/UserPosted/Details/@posts"/>"
+          },
+          "Comment": "<xsl:value-of select="Review/UserPosted/Comment"/>",
+          "Votes": {
+            "Upvotes": "<xsl:value-of select="Review/UserPosted/Votes/Upvotes"/>",
+            "Downvotes": "<xsl:value-of select="Review/UserPosted/Votes/Downvotes"/>"
+          }
+        }
+      }
+    },
+    <xsl:if test="position() &lt; last()">,</xsl:if>
   </xsl:template>
 
-  <!-- Template to match NutritionalValue element -->
-  <xsl:template match="NutritionalValue">
-    <p><strong>Nutritional Value:</strong></p>
-    <ul>
-      <li><xsl:value-of select="Energy"/></li>
-      <li><xsl:value-of select="Carbohydrates"/></li>
-      <li><xsl:value-of select="Fat"/></li>
-      <li><xsl:value-of select="Sugar"/></li>
-    </ul>
-  </xsl:template>
-
-  <!-- Template to match Ingredients element -->
-  <xsl:template match="Ingredients">
-    <p><strong>Ingredients:</strong></p>
-    <ul>
-      <!-- Apply templates for each Ingredient -->
-      <xsl:apply-templates select="Ingredient"/>
-    </ul>
-  </xsl:template>
-
-  <!-- Template to match each Ingredient element -->
   <xsl:template match="Ingredient">
-    <li><xsl:value-of select="."/></li>
+    "<xsl:value-of select="."/>"<xsl:if test="position() &lt; last()">,</xsl:if>
   </xsl:template>
 
-  <!-- Template to match Instructions element -->
-  <xsl:template match="Instructions">
-    <p><strong>Instructions:</strong></p>
-    <ol>
-      <!-- Apply templates for each Cooking step -->
-      <xsl:apply-templates select="Cooking"/>
-    </ol>
-  </xsl:template>
-
-  <!-- Template to match each Cooking step -->
-  <xsl:template match="Cooking">
-    <li><xsl:value-of select="."/></li>
-  </xsl:template>
-
-  <!-- Template to match SatisfactionScore element -->
-  <xsl:template match="SatisfactionScore">
-    <p><strong>Satisfaction Score:</strong> <xsl:value-of select="."/></p>
-  </xsl:template>
-
-  <!-- Template to match Cook element -->
-  <xsl:template match="Cook">
-    <p><strong>Cook Details:</strong></p>
-    <ul>
-      <li><strong>ID:</strong> <xsl:value-of select="Details/@ID"/></li>
-      <li><strong>Name:</strong> <xsl:value-of select="Details/@name"/></li>
-      <li><strong>Age:</strong> <xsl:value-of select="Details/@age"/></li>
-      <li><strong>Location:</strong> <xsl:value-of select="Details/@location"/></li>
-      <li><strong>Hobbies:</strong> <xsl:value-of select="Details/@hobbies"/></li>
-      <li><strong>Favorite Dish:</strong> <xsl:value-of select="Details/FavDish"/></li>
-      <li><strong>Experience:</strong> <xsl:value-of select="Details/Experience"/></li>
-      <li><strong>Skill Level Points:</strong> <xsl:value-of select="Details/SkillLevel/@points"/></li>
-      <li><strong>Number of Posts:</strong> <xsl:value-of select="Details/SkillLevel/@posts"/></li>
-      <li><strong>Email:</strong> <xsl:value-of select="Details/Contact/Email"/></li>
-      <li><strong>Phone:</strong> <xsl:value-of select="Details/Contact/Phone"/></li>
-    </ul>
-  </xsl:template>
-
-  <!-- Template to match Review element -->
-  <xsl:template match="Review">
-    <p><strong>Review:</strong></p>
-    <ul>
-      <li><strong>User:</strong> <xsl:value-of select="UserPosted/@name"/></li>
-      <li><strong>Date:</strong> <xsl:value-of select="UserPosted/@date"/></li>
-      <li><strong>Points:</strong> <xsl:value-of select="UserPosted/Details/@points"/></li>
-      <li><strong>Number of Posts:</strong> <xsl:value-of select="UserPosted/Details/@posts"/></li>
-      <li><strong>Comment:</strong> <xsl:value-of select="UserPosted/Comment"/></li>
-      <li><strong>Upvotes:</strong> <xsl:value-of select="Votes/Upvotes"/></li>
-      <li><strong>Downvotes:</strong> <xsl:value-of select="Votes/Downvotes"/></li>
-    </ul>
+  <xsl:template match="Instructions/*">
+    "<xsl:value-of select="."/>"<xsl:if test="position() &lt; last()">,</xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>
