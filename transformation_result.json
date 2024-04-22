@@ -1,0 +1,142 @@
+{
+  "Catalog": [
+    {
+      "name": "Europe",
+      "Countries": [
+        {
+          "name": "Italian",
+          "zone": "Western Europe",
+          "Recipes": [
+            {
+              "ID": "IT001",
+              "name": "Vegetarian Lasagna",
+              "date": "2024-04-03",
+              "Description": "Vegetarian Lasagna Recipe with Zuchini",
+              "PrepTime": "25",
+              "CookingTime": "10",
+              "EstimatedCost": "7",
+              "NutritionalValue": {
+                "Energy": "400 kcal",
+                "Carbohydrates": "60g",
+                "Fat": "10g",
+                "Sugar": "5g"
+              },
+              "Ingredients": [
+                "Lasagna noodles",
+                "Olive oil",
+                "Onion",
+                "Garlic",
+                "Zucchini",
+                "Yellow squash",
+                "Mushrooms",
+                "Canned diced tomatoes"
+              ],
+              "Instructions": [
+                "Cook lasagna noodles according to package instructions.",
+                "Heat olive oil in a pan, sauté onion and garlic until soft.",
+                "Add chopped red bell pepper, zucchini, yellow squash, and mushrooms. Cook until vegetables are tender.",
+                "Stir in diced tomatoes, tomato sauce, oregano, basil, salt, and pepper. Simmer for a few minutes.",
+                "In a separate bowl, mix ricotta cheese with spinach leaves.",
+                "Bake for 30-35 minutes until golden and bubbly.",
+                "Refrigerate for up to 24 hours.",
+                "1",
+                "Let it cool for a few minutes before serving."
+              ],
+              "SatisfactionScore": "4.5",
+              "Cook": {
+                "Details": {
+                  "ID": "CK01",
+                  "name": "Giovanni",
+                  "age": "35",
+                  "location": "Milan",
+                  "hobbies": "Cooking, gardening",
+                  "FavDish": "Pizza",
+                  "Experience": "5 years as a chef",
+                  "SkillLevel": {
+                    "points": "95",
+                    "posts": "20"
+                  },
+                  "Contact": {
+                    "Email": "giovanni@gmail.com",
+                    "Phone": "+39123456789"
+                  }
+                }
+              },
+              "Review": {
+                "UserPosted": {
+                  "name": "Jennifer Becker",
+                  "date": "2024-04-16",
+                  "ID": "US01",
+                  "Details": {
+                    "points": "80",
+                    "posts": "5"
+                  },
+                  "Comment": "Delicious! Highly recommend.",
+                  "Votes": {
+                    "Upvotes": "25",
+                    "Downvotes": "2"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Hungary",
+          "zone": "Central Europe",
+          "Recipes": [
+            {
+              "ID": "HU001",
+              "name": "Hungarian Goulash",
+              "date": "2023-11-15",
+              "Description": "Traditional Hungarian Beef Goulash",
+              "PrepTime": "40",
+              "CookingTime": "120",
+              "EstimatedCost": "15",
+              "NutritionalValue": {
+                "Energy": "550 kcal",
+                "Carbohydrates": "40g",
+                "Fat": "30g",
+                "Sugar": "10g"
+              },
+              "Ingredients": [
+                "Vegetable oil",
+                "Onion",
+                "Garlic",
+                "Beef stew meat",
+                "Paprika",
+                "Caraway seeds",
+                "Thyme",
+                "Salt",
+                "Black pepper",
+                "Tomato paste",
+                "Beef broth",
+                "Potatoes",
+                "Carrots",
+                "Red bell pepper",
+                "Green bell pepper",
+                "Sour cream (optional)",
+                "Fresh parsley"
+              ],
+              "Instructions": [
+                "Chop onions, mince garlic, cut beef into cubes, peel and cube potatoes, slice carrots, chop bell peppers.",
+                "Heat oil, sauté onions and garlic.",
+                "Brown beef cubes.",
+                "Add paprika, caraway, thyme, salt, pepper; cook for 2 minutes.",
+                "Stir in tomato paste and beef broth, simmer for 1 hour.",
+                "Add potatoes, carrots, bell peppers; simmer for 30-40 minutes.",
+                "Adjust seasoning, add more broth if needed.",
+                "Refrigerate for up to 3 days.",
+                "Reheat on stovetop or in microwave.",
+                "Serve with crusty bread or egg noodles."
+              ],
+              "SatisfactionScore": "4.8",
+              "Cook": {
+                "Details": {
+                  "ID": "CK02",
+                  "name": "Katalin",
+                  "age": "42",
+                  "location": "Budapest",
+                  "hobbies": "Cooking, traveling",
+                  "FavDish": "Goulash",
+                 
