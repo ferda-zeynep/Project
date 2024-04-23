@@ -39,7 +39,9 @@
       "spice_level": "<xsl:value-of select="@spice_level"/>",
       "course_type": "<xsl:value-of select="@course_type"/>",
       "Recipes": [
-        <xsl:apply-templates select="Recipes/Recipe"/>
+        <xsl:apply-templates select="Recipes/Recipe">
+          <xsl:sort select="SatisfactionScore" data-type="number" order="descending"/>
+        </xsl:apply-templates>
       ]
     }
   </xsl:template>
@@ -60,12 +62,20 @@
         "Sugar": "<xsl:value-of select="NutritionalValue/Sugar"/>"
       },
       "Ingredients": [
-        <xsl:apply-templates select="Ingredients/Ingredient"/>
+        <xsl:for-each select="Ingredients/Ingredient">
+          "<xsl:value-of select="."/>"<xsl:if test="position() &lt; last()">,</xsl:if>
+        </xsl:for-each>
       ],
       "Instructions": [
-        <xsl:apply-templates select="Instructions/*"/>
+        <xsl:for-each select="Instructions/*">
+          "<xsl:value-of select="."/>"<xsl:if test="position() &lt; last()">,</xsl:if>
+        </xsl:for-each>
       ],
       "SatisfactionScore": "<xsl:value-of select="SatisfactionScore"/>",
+      "SatisfactionComment": "<xsl:choose>
+                                  <xsl:when test="SatisfactionScore &gt; 4.0">Highly recommended!</xsl:when>
+                                  <xsl:otherwise>Needs improvement.</xsl:otherwise>
+                              </xsl:choose>",
       "Cook": {
         "Details": {
           "ID": "<xsl:value-of select="Cook/Details/ID"/>",
@@ -105,12 +115,5 @@
     <xsl:if test="position() &lt; last()">,</xsl:if>
   </xsl:template>
 
-  <xsl:template match="Ingredient">
-    "<xsl:value-of select="."/>"<xsl:if test="position() &lt; last()">,</xsl:if>
-  </xsl:template>
-
-  <xsl:template match="Instructions/*">
-    "<xsl:value-of select="."/>"<xsl:if test="position() &lt; last()">,</xsl:if>
-  </xsl:template>
-
 </xsl:stylesheet>
+
