@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Culinary Compass: Your gateway to delicious simplicity. Explore a world of effortless cooking and delightful flavors."
+    />
+    <meta
+      name="keywords"
+      content="cooking, recipes, cuisine, international, easy meals"
+    />
+    <title>Culinary Compass | Explore Deliciousness</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -10,8 +19,34 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Markup Language</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Website",
+        "name": "Culinary Compass",
+        "description": "Explore a world of effortless cooking and delightful flavors with Culinary Compass. Find easy recipes from various cuisines.",
+        "url": "https://yourwebsite.com",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://yourwebsite.com"
+        }
+      }
+    </script>
+    <meta
+      property="og:title"
+      content="Culinary Compass | Explore Deliciousness"
+    />
+    <meta
+      property="og:description"
+      content="Culinary Compass: Your gateway to delicious simplicity. Explore a world of effortless cooking and delightful flavors."
+    />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/images/logo.png"
+    />
+    <meta property="og:site_name" content="Culinary Compass" />
   </head>
   <body>
     <!--! header section start -->
@@ -27,7 +62,6 @@
       </nav>
     </header>
     <!--! header section end -->
-
     <!--! home section start -->
     <section class="home" id="home">
       <div class="content">
@@ -36,12 +70,12 @@
           Your gateway to delicious simplicity. Dive into a world of effortless
           cooking and delightful flavors. Whether you're a kitchen novice or a
           seasoned chef, Culinary Compass is your companion for quick, tasty
-          creations. Let's make cooking a breeze and meals a joy with Culinary Compasss!
+          creations. Let's make cooking a breeze and meals a joy with Culinary
+          Compasss!
         </p>
       </div>
     </section>
     <!--! home section end -->
-
     <!--! country section start -->
     <section class="country" id="country">
       <h1 class="heading">Countries</h1>
@@ -113,7 +147,6 @@
       </div>
     </section>
     <!--! country section end -->
-
     <!--! recipes section start -->
     <section class="recipes" id="recipes">
       <h1 class="heading">Recipes</h1>
@@ -127,7 +160,7 @@
           </div>
           <div class="box-bottom">
             <div class="info">
-              <b class="time">25 mins</b>
+              <time class="time">25 mins</time>
               <span class="amount">461 Cal / 110gr </span>
             </div>
           </div>
@@ -141,7 +174,7 @@
           </div>
           <div class="box-bottom">
             <div class="info">
-              <b class="time">40 mins</b>
+              <time class="time">40 mins</time>
               <span class="amount">354 Cal / 170gr</span>
             </div>
           </div>
@@ -155,7 +188,7 @@
           </div>
           <div class="box-bottom">
             <div class="info">
-              <b class="time">50 mins</b>
+              <time class="time">50 mins</time>
               <span class="amount">560 Cal / 200gr</span>
             </div>
           </div>
@@ -169,7 +202,7 @@
           </div>
           <div class="box-bottom">
             <div class="info">
-              <b class="time">35 mins</b>
+              <time class="time">35 mins</time>
               <span class="amount">221 Cal / 90gr</span>
             </div>
           </div>
@@ -187,11 +220,12 @@
         <div class="content">
           <h3>Discover the Joy of Stress-Free Cooking with Culinary Compass</h3>
           <p>
-            Welcome to Culinary Compass, your ultimate destination for stress-free
-            cooking and culinary inspiration. Culinary Compass, we believe that
-            everyone deserves delicious meals without the hassle. Our mission is
-            to make cooking accessible, enjoyable, and downright fun for
-            everyone, regardless of skill level or experience in the kitchen.
+            Welcome to Culinary Compass, your ultimate destination for
+            stress-free cooking and culinary inspiration. Culinary Compass, we
+            believe that everyone deserves delicious meals without the hassle.
+            Our mission is to make cooking accessible, enjoyable, and downright
+            fun for everyone, regardless of skill level or experience in the
+            kitchen.
           </p>
           <p>
             Our team is comprised of passionate food enthusiasts and experienced
@@ -210,9 +244,7 @@
       </div>
     </section>
     <!--! about  end -->
-
     <!--! contact section start -->
-
     <section class="contact" id="contact">
       <h1 class="heading">Contact Us</h1>
       <div class="row">
@@ -239,7 +271,6 @@
         </form>
       </div>
     </section>
-
     <!--! contact section end -->
     <!--! review section start -->
     <section class="review" id="review">
@@ -247,9 +278,7 @@
       <div class="box-container">
         <div class="box">
           <img src="images/quote.png" alt="quote" />
-          <p>
-            Delicious! Highly recommend.
-          </p>
+          <p>Delicious! Highly recommend.</p>
           <img src="images/avatar-1.png" alt="avatar" class="user" />
           <h3>Jennifer Becker</h3>
           <div class="stars">
@@ -262,9 +291,7 @@
         </div>
         <div class="box">
           <img src="images/quote.png" alt="quote" />
-          <p>
-            Amazingly flavorful and hearty!
-          </p>
+          <p>Amazingly flavorful and hearty!</p>
           <img src="images/avatar-2.png" alt="avatar" class="user" />
           <h3>David Smith</h3>
           <div class="stars">
@@ -277,9 +304,7 @@
         </div>
         <div class="box">
           <img src="images/quote.png" alt="quote" />
-          <p>
-            These fajitas were amazing! So flavorful and easy to make.
-          </p>
+          <p>These fajitas were amazing! So flavorful and easy to make.</p>
           <img src="images/avatar-3.png" alt="avatar" class="user" />
           <h3>Lisa Arambula</h3>
           <div class="stars">
@@ -293,12 +318,10 @@
       </div>
     </section>
     <!--! review section end -->
-
-    <!--! footer section start -->
-
-    <section class="footer">
+    <!--! footer start -->
+    <footer class="footer">
       <h1>created by Ferda Zeynep Capa, Sai Sreekantt M, Vanessa Flora</h1>
-    </section>
-    <!--! footer section end -->
+    </footer>
+    <!--! footer end -->
   </body>
 </html>
